@@ -14,8 +14,7 @@ typedef void(^LWCoreMnagedObjectBlock)(NSManagedObject * _Nonnull managedObject)
 
 @interface LWCoreDataManager : NSObject
 
-@property (nonatomic, copy, readwrite) NSString *sqlName;
-
+@property (nonatomic, copy, readwrite) NSString * _Nonnull sqlName;
 @property (readonly, strong, nonatomic) NSManagedObjectContext * _Nonnull managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel * _Nonnull managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator * _Nonnull persistentStoreCoordinator;
