@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LWCoreDataManager_Example' do
+  pod 'LWCoreDataManager', :path => '../'
+
+  target 'LWCoreDataManager_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
