@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LWCoreDataManager'
-  s.version          = '1.0.0-beta'
+  s.version          = '1.0.1-beta'
   s.summary          = 'User for Core data.'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/waydechou1994/LWCoreDataManager'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'waydechou1994' => 'linwei.zhou@protontel.com' }
+  s.author           = { 'waydechou1994' => 'linwei.zhou@protontek.com' }
   s.source           = { :git => 'https://github.com/waydechou1994/LWCoreDataManager.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
