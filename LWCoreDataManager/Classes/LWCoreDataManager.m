@@ -8,7 +8,7 @@
 
 #import "LWCoreDataManager.h"
 
-NSString *const LWSqliteName = @"vCare_Doctor_DB";
+//NSString *const _sqlName = @"vCare_Doctor_DB";
 
 @implementation LWCoreDataManager
 
@@ -44,7 +44,7 @@ NSString *const LWSqliteName = @"vCare_Doctor_DB";
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:LWSqliteName withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:_sqlName withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -58,7 +58,7 @@ NSString *const LWSqliteName = @"vCare_Doctor_DB";
     // Create the coordinator and store
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite", LWSqliteName]];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite", _sqlName]];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
     NSDictionary *configuration = @{
@@ -117,7 +117,7 @@ NSString *const LWSqliteName = @"vCare_Doctor_DB";
 }
 
 - (BOOL)cm_removeAllTables {
-    NSURL *fileURL1 = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite", LWSqliteName]];
+    NSURL *fileURL1 = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite", _sqlName]];
     
     NSError *error = nil;
     if (![[NSFileManager defaultManager] removeItemAtURL:fileURL1 error:&error]) {
@@ -130,7 +130,7 @@ NSString *const LWSqliteName = @"vCare_Doctor_DB";
     
     [self.persistentStoreCoordinator removePersistentStore:self.persistentStoreCoordinator.persistentStores[0] error:nil];
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite", LWSqliteName] isDirectory:YES];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite", _sqlName] isDirectory:YES];
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
     NSDictionary *configuration = @{
                                     NSMigratePersistentStoresAutomaticallyOption : @YES,
