@@ -1,0 +1,16 @@
+PODS:
+  - LWCoreDataManager (0.1.0)
+
+DEPENDENCIES:
+  - LWCoreDataManager (from `../`)
+
+EXTERNAL SOURCES:
+  LWCoreDataManager:
+    :path: ../
+
+SPEC CHECKSUMS:
+  LWCoreDataManager: 1817074112da08530af35ab66ddf0c33167f2b26
+
+PODFILE CHECKSUM: 6cc8cf6bbda78bd1a62d67121dc42babab5ffe38
+
+COCOAPODS: 1.2.0
