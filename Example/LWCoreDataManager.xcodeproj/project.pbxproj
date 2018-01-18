@@ -24,6 +24,9 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B72CF42A1FB438AC00E82598 /* ProfileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B72CF4291FB438AC00E82598 /* ProfileModel.m */; };
+		B72CF42D1FB438DC00E82598 /* ReportModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B72CF42C1FB438DC00E82598 /* ReportModel.m */; };
+		B72CF4341FB43A3500E82598 /* NSObject+Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = B72CF4331FB43A3500E82598 /* NSObject+Converter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,12 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E27DC938BF18D806F20EB61 /* Pods-LWCoreDataManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWCoreDataManager_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LWCoreDataManager_Tests/Pods-LWCoreDataManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B72CF4281FB438AC00E82598 /* ProfileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileModel.h; sourceTree = "<group>"; };
+		B72CF4291FB438AC00E82598 /* ProfileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileModel.m; sourceTree = "<group>"; };
+		B72CF42B1FB438DB00E82598 /* ReportModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportModel.h; sourceTree = "<group>"; };
+		B72CF42C1FB438DC00E82598 /* ReportModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportModel.m; sourceTree = "<group>"; };
+		B72CF4321FB43A3500E82598 /* NSObject+Converter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Converter.h"; sourceTree = "<group>"; };
+		B72CF4331FB43A3500E82598 /* NSObject+Converter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Converter.m"; sourceTree = "<group>"; };
 		C224E638C2E8A05D20607C93 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CD70F25D2CDDECC12C55D10E /* Pods-LWCoreDataManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWCoreDataManager_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LWCoreDataManager_Tests/Pods-LWCoreDataManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DCA681AAB6BFEE3E77DDF8D6 /* Pods_LWCoreDataManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LWCoreDataManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +157,12 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* LWViewController.h */,
 				6003F5A6195388D20070C39A /* LWViewController.m */,
+				B72CF42B1FB438DB00E82598 /* ReportModel.h */,
+				B72CF42C1FB438DC00E82598 /* ReportModel.m */,
+				B72CF4281FB438AC00E82598 /* ProfileModel.h */,
+				B72CF4291FB438AC00E82598 /* ProfileModel.m */,
+				B72CF4321FB43A3500E82598 /* NSObject+Converter.h */,
+				B72CF4331FB43A3500E82598 /* NSObject+Converter.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -250,6 +265,9 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = waydechou1994;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = UM4RNVFJDZ;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -394,9 +412,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72CF42D1FB438DC00E82598 /* ReportModel.m in Sources */,
 				6003F59E195388D20070C39A /* LWAppDelegate.m in Sources */,
+				B72CF4341FB43A3500E82598 /* NSObject+Converter.m in Sources */,
 				6003F5A7195388D20070C39A /* LWViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				B72CF42A1FB438AC00E82598 /* ProfileModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +555,7 @@
 			baseConfigurationReference = 0183536418F2F0A897F8B896 /* Pods-LWCoreDataManager_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UM4RNVFJDZ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LWCoreDataManager/LWCoreDataManager-Prefix.pch";
 				INFOPLIST_FILE = "LWCoreDataManager/LWCoreDataManager-Info.plist";
@@ -549,6 +571,7 @@
 			baseConfigurationReference = 2E180F1701E13240E3777D06 /* Pods-LWCoreDataManager_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UM4RNVFJDZ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LWCoreDataManager/LWCoreDataManager-Prefix.pch";
 				INFOPLIST_FILE = "LWCoreDataManager/LWCoreDataManager-Info.plist";

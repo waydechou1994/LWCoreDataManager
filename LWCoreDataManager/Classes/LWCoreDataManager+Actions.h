@@ -59,6 +59,14 @@
                              error:(NSError * _Nullable * _Nullable)error
                         usingBlock:(void (^ _Nullable)(id _Nonnull object))block;
 
+- (nullable NSArray *)cm_iterateFor:(NSUInteger)numberOfItems
+                           inEntity:(NSString * _Nonnull)entityName
+                           expected:(Class _Nonnull)className
+                          predicate:(NSPredicate * _Nullable)predicate
+                             sortBy:(NSSortDescriptor * _Nullable)sortDescriptor
+                              error:(NSError * _Nullable * _Nullable)error
+                         usingBlock:(void (^ _Nullable)(id _Nonnull object))block;
+
 /** 遍历表`entityName`中满足predicate的所有model */
 - (nullable NSArray *)cm_iterateManagedObjectsIn:(NSString * _Nonnull)entityName
                                        predicate:(NSPredicate * _Nonnull)predicate

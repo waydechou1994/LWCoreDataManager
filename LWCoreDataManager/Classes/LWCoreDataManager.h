@@ -14,10 +14,10 @@ typedef void(^LWCoreMnagedObjectBlock)(NSManagedObject * _Nonnull managedObject)
 
 @interface LWCoreDataManager : NSObject
 
-@property (nonatomic, copy, readwrite) NSString * _Nonnull sqlName;
-@property (readonly, strong, nonatomic) NSManagedObjectContext * _Nonnull managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel * _Nonnull managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator * _Nonnull persistentStoreCoordinator;
+@property (nonatomic, copy, nonnull) NSString *  sqlName;
+@property (readonly, strong, nonatomic, nonnull) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic, nonnull) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic, nonnull) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 - (void)saveContext;
 - (NSURL * _Nonnull)applicationDocumentsDirectory;

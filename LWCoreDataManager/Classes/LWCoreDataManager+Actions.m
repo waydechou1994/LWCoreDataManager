@@ -142,6 +142,22 @@
                    sortBy:(NSSortDescriptor *)sortDescriptor
                     error:(NSError *__autoreleasing  _Nullable *)error
                usingBlock:(void (^ _Nullable)(id _Nonnull))block {
+    return [self cm_iterateFor:0
+                      inEntity:entityName
+                      expected:className
+                     predicate:predicate
+                        sortBy:sortDescriptor
+                         error:error
+                    usingBlock:block];
+}
+
+- (NSArray *)cm_iterateFor:(NSUInteger)numberOfItems
+                  inEntity:(NSString *)entityName
+                  expected:(Class)className
+                 predicate:(NSPredicate *)predicate
+                    sortBy:(NSSortDescriptor *)sortDescriptor
+                     error:(NSError *__autoreleasing  _Nullable *)error
+                usingBlock:(void (^)(id _Nonnull))block {
     
     NSMutableArray *reportArray = nil;
     
@@ -154,6 +170,10 @@
         
         if (sortDescriptor) {
             [request setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+        }
+        
+        if (numberOfItems > 0) {
+            [request setFetchLimit:numberOfItems];
         }
         
         NSError *error = nil;

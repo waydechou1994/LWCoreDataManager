@@ -7,6 +7,9 @@
 //
 
 #import "LWViewController.h"
+#import "ReportModel.h"
+#import "ProfileModel.h"
+#import "NSObject+Converter.h"
 
 @interface LWViewController ()
 
@@ -17,6 +20,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    ReportModel *report = [[ReportModel alloc] init];
+    report.reportID = @"200";
+    report.peripheralName = @"dfadf";
+    
+    NSDictionary *dic = [report covertToDictionary];
+    NSLog(@"_ dic %@", dic);
+    
+    NSDictionary *profileDic = @{
+                          @"id": @"20",
+                          @"creator": @"creator",
+                          @"title": @"title",
+                          @"realname": @"realname"
+                          };
+    ProfileModel *profile = [[ProfileModel alloc] initWithDictionary:profileDic];
+    NSLog(@"_ profile %@", profile);
+
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
