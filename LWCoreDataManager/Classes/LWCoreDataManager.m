@@ -136,7 +136,9 @@
         return NO;
     };
     
-    [self.persistentStoreCoordinator removePersistentStore:self.persistentStoreCoordinator.persistentStores[0] error:nil];
+    if (self.persistentStoreCoordinator.persistentStores.count > 0) {
+        [self.persistentStoreCoordinator removePersistentStore:self.persistentStoreCoordinator.persistentStores[0] error:nil];
+    }
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite", self.sqlName] isDirectory:YES];
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";

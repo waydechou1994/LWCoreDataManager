@@ -82,4 +82,7 @@
                                           sortBy:(NSSortDescriptor * _Nullable)sortDescriptor
                                            error:(NSError * _Nullable * _Nullable)error;
 
+- (BOOL)cm_itemExists:(NSPredicate * _Nullable)predicate
+             inEntity:(NSString * _Nonnull)entityName;
+
 @end
